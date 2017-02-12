@@ -1,0 +1,72 @@
+@green: #9C3;
+
+@sectionBumper: 30px;
+
+body {
+    font-family: 'Muli', sans-serif;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    height: 80px;
+    border-bottom: 1px solid #ddd;
+    font-color: @green;
+
+    .logo {
+        img {
+            position: relative;
+            top: -60px;
+        }
+    }
+}
+
+.section {
+    margin-top: @sectionBumper;
+
+    .header {
+        text-align: center;
+        font-size: 38px;
+        line-height: 40px;
+        color: #000;
+        padding: 10px 0;
+    }
+}
+
+.testimonial-box {
+    margin-top: @sectionBumper;
+    height: 200px;
+    text-align: center;
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+        border: 2px solid #ddd;
+        margin: 0 auto;
+    }
+
+    .testimonial {
+        font-family: 'Open Sans', sans-serif;
+        color: #666;
+        font-style: italic;
+        padding-top: 10px;
+        font-size: 17px;
+    }
+
+    .name {
+        padding-top: 10px;
+        color: @green;
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 14px;
+        color: #666;
+        padding-bottom: 15px;
+    }
+}
