@@ -1,6 +1,6 @@
 @green: #9C3;
 
-@sectionBumper: 30px;
+@sectionBumper: 35px;
 
 body {
     font-family: 'Muli', sans-serif;
@@ -9,6 +9,16 @@ body {
 p {
     margin: 0;
     padding: 0;
+}
+
+
+
+.bumperTop {
+    margin-top: @sectionBumper;
+}
+
+.bumperTop-xs {
+    margin-top: 20px;
 }
 
 .top-bar {
@@ -34,6 +44,16 @@ p {
         color: #000;
         padding: 10px 0;
     }
+
+    .subheader {
+        text-align: center;
+        font-size: 18px;
+        color: #aaa;
+    }
+}
+
+.testimonial-carrousel {
+    display: none;
 }
 
 .testimonial-box {
@@ -69,4 +89,44 @@ p {
         color: #666;
         padding-bottom: 15px;
     }
+}
+
+#money-chart {
+    max-height: 400px;
+}
+
+.how-it-works {
+    text-align: center;
+    .title {
+        font-size: 18px;
+        font-weight: bold;
+    }
+    img {
+        padding: 15px;
+    }
+    .info {
+        padding-top: 10px;
+        font-size: 16px;
+        color: #666;
+        text-align: left;
+    }
+}
+
+.form-control {
+    border-radius: 0px;
+    outline: none;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    &:focus {
+        border-color: @green;
+    }
+}
+
+.disclaimer {
+    text-align: left;
+    color: #999;
+    font-style: italic;
+    padding-top: 10px;
+    font-size: 12px;
 }

@@ -34,6 +34,11 @@
         <link rel="stylesheet" type="text/css" href="assets/slick/slick.css">
         <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css">
         <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+        <!-- Highcharts -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
     </head>
     <body>
         <div class="top-bar">
@@ -50,36 +55,106 @@
                 </div>
             </div>
 
-            <div class="row col-md-6 col-md-offset-3 testimonial-box">
-                <div class="testimonial-carrousel">
-                    <div>
-                        <img  class="avatar" src="assets/img/avatar-gorana.png">
-                        <p class="testimonial">"When I'm ready to start my own business I'll have the money."</p>
-                        <p class="name">Gorana Martic</p>
-                        <p class="title">Registered Nurse<p>
-                    </div>
-                    <div>
-                        <img  class="avatar" src="assets/img/avatar-diana.png">
-                        <p class="testimonial">"When my baby goes to college I'll pay her tuition in full."</p>
-                        <p class="name">Diana Ilinca</p>
-                        <p class="title">Entrepreneur<p>
-                    </div>
-                    <div>
-                        <img  class="avatar" src="assets/img/avatar-cosmin.png">
-                        <p class="testimonial">"I'll rest better knowing that I'm building an emergency fund."</p>
-                        <p class="name">Tim Williams</p>
-                        <p class="title">Junior Engineer<p>
+            <div class="row testimonial-box">
+                <div class="col-md-6 col-md-offset-3">
+                    <div class="testimonial-carrousel">
+                        <div>
+                            <img  class="avatar" src="assets/img/avatar-gorana.png">
+                            <p class="testimonial">"When I'm ready to start my own business I'll have the money."</p>
+                            <p class="name">Gorana Martic</p>
+                            <p class="title">Registered Nurse<p>
+                        </div>
+                        <div>
+                            <img  class="avatar" src="assets/img/avatar-diana.png">
+                            <p class="testimonial">"When my baby goes to college I'll pay her tuition in full."</p>
+                            <p class="name">Diana Ilinca</p>
+                            <p class="title">Entrepreneur<p>
+                        </div>
+                        <div>
+                            <img  class="avatar" src="assets/img/avatar-cosmin.png">
+                            <p class="testimonial">"I'll rest better knowing that I'm building an emergency fund."</p>
+                            <p class="name">Tim Williams</p>
+                            <p class="title">Junior Engineer<p>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div id="money-chart" class="col-md"></div>
+            </div>
+
+            <hr class="bumperTop">
+
+            <div class="row section">
+                <div class="col-md header">
+                    <p>How It Works</p>
+                    <p class="subheader">
+                        We believe people should enjoy life while computers do the investing.
+                    </p>
+                </div>
+            </div>
+            <div class="row section">
+                <div class="col-sm-4 how-it-works">
+                    <p class="title">Connect Your Bank Account</p>
+                    <img src="assets/img/connect.png">
+                    <p class="info">
+                        Once a month we'll debit $100 from your bank account. We take your security seriously by taking the latest measures to protect access to your account.
+                    </p>
+                </div>
+                <div class="col-sm-4 how-it-works">
+                    <p class="title">Sit Back & Relax</p>
+                    <img src="assets/img/stocks.png">
+                    <p class="info">
+                        We'll invest your $100 by purchasing you a fraction of a stock in the best performing US index fund from Vanguard. You just watch your investment growing over time.
+                    </p>
+                </div>
+                <div class="col-sm-4 how-it-works">
+                    <p class="title">Cash Out</p>
+                    <img src="assets/img/cashout.png">
+                    <p class="info">
+                        When you're ready, we'll sell your stocks at market price and transfer you the money in full. We don't take any commision - all the money you make is your money!
+                    </p>
+                </div>
+            </div>
+
+            <hr class="bumperTop">
+            <div class="row section">
+                <div class="col-md header">
+                    <p>Start Investing</p>
+                    <p class="subheader">
+                        For just $1/mo become a long term investor with the least possible effort.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row section">
+                <div class="col-md-4 col-md-offset-4" style="text-align:center">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="customer-name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="customer-email" placeholder="Your Email">
+                        </div>
+                         <div class="form-group">
+                            <input type="text" class="form-control" id="customer-country" placeholder="Your Country">
+                        </div>
+                         <div class="form-group">
+                            <textarea type="text" class="form-control" id="customer-wish" placeholder="Why would you like to start investing monthly $100?" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success bumperTop-xs">Send Me An Invitation</button>
+                        <p class="disclaimer"></p>
+                        <p class="disclaimer">* we hate spam. We promise to use your email address just to notify you when you're invited to become an investor.</p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row section" style="padding-top:100px">
+            </div>
+
         </div>
-        <script type="text/javascript">
-            $(document).ready(function(){
-              $('.testimonial-carrousel').slick({
-                autoplay: true,
-                dots: true
-              });
-            });
-        </script>
+
+        <script src="assets/js/start.js"></script>
     </body>
 </html>
