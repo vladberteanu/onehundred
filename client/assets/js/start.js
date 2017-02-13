@@ -3,6 +3,9 @@ $(document).ready(function(){
     autoplay: true,
     dots: true
   });
+  $('.alert').on('close.bs.alert', function () {
+    $('.top-bar').css('margin-top', '0px');
+  });
 });
 
 
@@ -51,3 +54,4 @@ $(function () {
         ]
     });
 });
+
