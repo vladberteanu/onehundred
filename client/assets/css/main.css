@@ -15,8 +15,6 @@ a {
     text-decoration: none !important;
 }
 
-
-
 .bumperTop {
     margin-top: @sectionBumper;
 }
@@ -25,18 +23,21 @@ a {
     margin-top: 20px;
 }
 
-.top-bar {
-    margin-top: 77px;
+.menu-bar {
     height: 80px;
     border-bottom: 1px solid #ddd;
     font-color: @green;
     .logo {
         img {
-            position: relative;
-            top: -60px;
-            left: 15px;
+            padding-top: 15px;
         }
     }
+}
+
+.menu-bar.with-referral {
+    margin-top: 50px;
+    @media(max-width:767px) { margin-top: 70px; }
+
 }
 
 .section {
@@ -188,4 +189,12 @@ a {
 
 .alert {
     margin-bottom: 0px;
+}
+
+.error {
+    color: red;
+}
+
+#referral-bar {
+    display: none;
 }

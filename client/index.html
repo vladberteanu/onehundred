@@ -16,7 +16,7 @@
           href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300">
 
         <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="crossorigin="anonymous"></script>
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -43,14 +43,17 @@
 
     </head>
     <body>
-        <div class="alert alert-success alert-dismissible navbar-fixed-top" role="alert">
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <p>Courtesy to your friend <strong>Gorana Martic</strong> your first month is free.</p>
-          <p>Start investing with your friends today!</p>
+        <div id="referral-bar" class="alert alert-success alert-dismissible navbar-fixed-top" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" onclick="closeReferralBar();">&times;</span></button>
+          <p>Courtesy to your friend <strong></strong> you can start investing for free in the first month!</p>
         </div>
-        <div class="row top-bar">
-            <div class="col-sm-1 logo">
-                <img src="/assets/img/logo.png">
+        <div class="menu-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm logo">
+                        <img src="/assets/img/logo.png">
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container">
@@ -137,19 +140,20 @@
 
             <div class="row section">
                 <div class="col-md-4 col-md-offset-4" style="text-align:center">
-                    <form>
+                    <form id="form-1" onsubmit="return register('form-1');">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="customer-name" placeholder="Your Name">
+                            <input type="text" class="form-control" name="customer-name" placeholder="Your Name">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="customer-email" placeholder="Your Email">
+                            <input type="email" class="form-control" name="customer-email" placeholder="Your Email">
                         </div>
                          <div class="form-group">
-                            <input type="text" class="form-control" id="customer-country" placeholder="Your Country">
+                            <input type="text" class="form-control" name="customer-country" placeholder="Your Country">
                         </div>
                          <div class="form-group">
-                            <textarea type="text" class="form-control" id="customer-wish" placeholder="Why would you like to start investing monthly $100?" rows="3"></textarea>
+                            <textarea type="text" class="form-control" name="customer-wish" placeholder="Why would you like to start investing monthly $100?" rows="3"></textarea>
                         </div>
+                        <p class="error"></p>
                         <button type="submit" class="btn btn-success bumperTop-xs">Send Me An Invitation</button>
                         <p class="disclaimer"></p>
                         <p class="disclaimer">* we hate spam. We promise to use your email address just to notify you when you're invited to become an investor.</p>
@@ -285,7 +289,7 @@
 
             <div class="row section">
                 <div class="col-md-4 col-md-offset-4" style="text-align:center">
-                    <form>
+                    <form id="form-2" onsubmit="return register('form-2');">
                         <div class="form-group">
                             <input type="text" class="form-control" id="customer-name" placeholder="Your Name">
                         </div>
@@ -298,7 +302,8 @@
                          <div class="form-group">
                             <textarea type="text" class="form-control" id="customer-wish" placeholder="Why would you like to start investing monthly $100?" rows="3"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-success bumperTop-xs">Send Me An Invitation</button>
+                        <p class="error"></p>
+                        <button type='submit' class="btn btn-success bumperTop-xs">Send Me An Invitation</button>
                         <p class="disclaimer"></p>
                         <p class="disclaimer">* we hate spam. We promise to use your email address just to notify you when you're invited to become an investor.</p>
                     </form>
@@ -316,6 +321,9 @@
 
         </div>
 
+        <script src="assets/js/lead-gen.js"></script>
+        <script src="assets/js/referral.js"></script>
+        <script src="assets/js/money-chart.js"></script>
         <script src="assets/js/start.js"></script>
     </body>
 </html>

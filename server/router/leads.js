@@ -1,16 +1,18 @@
 var express = require('express')
 var router = express.Router()
-var conn = require('../../db')
+var conn = require('../models')
+var shortid = require('shortid');
+
 
 router.get('/', function(req, res) {
-  var Lead = conn.model('Lead')
-  var referalLink = req.query.referalLink
 
-  if (!referalLink) {
+  var referralLink = req.query.referralLink
+  console.log(req.query, referralLink)
+  if (!referralLink) {
     return res.sendStatus(400)
   }
 
-  Lead.findOne({referalLink: referalLink}, function(err, lead) {
+  conn.model('Lead').findOne({referralLink: referralLink}, function(err, lead) {
     if (err) {
         return res.sendStatus(500)
     }
@@ -23,19 +25,30 @@ router.get('/', function(req, res) {
 
 
 router.post('/', function(req, res) {
-  var Lead = conn.model('Lead')
-  var leadData = req.body.lead
+    var lead = req.body.lead
 
-
-  lead.created = Date.now()
-
-  Lead.create(lead, function(err, lead) {
-    if (err) {
-      return res.sendStatus(500)
+    if (!lead || !lead.email) {
+        return res.send(400)
     }
-    res.send({ lead: lead.toClient() })
-  })
 
+    conn.model('Lead').findOne({email: lead.email}, function(err, existingLead) {
+        if (err) {
+            return res.send(500)
+        }
+        if (existingLead) {
+            return res.send({ error: 'An invitation was already requested for this email address.'})
+        }
+
+        lead.created = Date.now()
+        lead.referralLink = shortid.generate()
+
+        conn.model('Lead').create(lead, function(err, lead) {
+            if (err) {
+                return res.sendStatus(500)
+            }
+            res.send({ lead: lead.toClient() })
+        })
+    })
 })
 
 

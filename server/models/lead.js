@@ -4,18 +4,18 @@ var Schema = require('mongoose').Schema
 
 var leadSchema = new Schema(
     {
-        fullName: String,
+        name: String,
         email: String,
         reason: String,
         country: String,
-        referalLink: String,
+        referralLink: String,
         created: Date,
     }
 )
 
 
 leadSchema.methods.toClient = function() {
-  return _.pick(this, ['fullName', 'referalLink'])
+  return _.pick(this, ['name', 'referralLink'])
 }
 
 
