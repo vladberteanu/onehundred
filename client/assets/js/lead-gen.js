@@ -104,8 +104,9 @@ function getParameterByName(name, url) {
 
 
 function displayReferralBar(friendName) {
+    var name = friendName.replace(/\b\w/g, function(l){ return l.toUpperCase() })
     var referralBar = $('#referral-bar')
-    referralBar.find('strong').html(friendName)
+    referralBar.find('strong').html(name)
     referralBar.show()
     $('.menu-bar').addClass('with-referral')
 }
