@@ -4,4 +4,5 @@ $(document).ready(function(){
     dots: true
   });
   loadReferralBar();
+  $('.cta-box').html($('#signup-tmpl').html())
 });

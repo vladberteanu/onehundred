@@ -48,9 +48,8 @@ function setReferralLink() {
 
 
 function displayRegistrationSuccess() {
+    $('.cta-box').html($('#signup-success-tmpl').html())
     setReferralLink()
-    $('.signup-box').hide()
-    $('.signup-success-box').fadeIn()
 }
 
 

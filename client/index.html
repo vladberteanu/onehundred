@@ -147,82 +147,7 @@
 
             <hr class="bumperTop">
 
-            <div class='signup-success-box'>
-                <div class="row section">
-                    <div class="col-md header">
-                        <p>Good Work!</p>
-                        <p class="subheader">
-                            You've taken a huge leap towards a better future.
-                        </p>
-                    </div>
-                </div>
-                <div class="row section">
-                    <div class="col-md-6 col-md-offset-3 how-it-works" style="text-align:center">
-                        <p class="title">Thank You For Your Trust</p>
-                        <img src="assets/img/pray.png">
-                        <p class="info">
-                           Our team is working hard to bring you the simplest investing experience ever. We'll send you an invitation soon.
-                    </div>
-                </div>
-                <div class="row section">
-                    <div class="col-md-6 col-md-offset-3 how-it-works" style="text-align:center">
-                        <p class="title">Be The Teacher For Your Friends And Family</p>
-                        <img src="assets/img/share.png">
-                        <p class="info">
-                           Share your personalized link below to help your friends start investing for FREE for the first month. You’ll also receive a FREE month each friend that becomes an investor with us.
-                        </p>
-                        <p class="referral-link">
-                            <a href="#" target="_blank">onehundred.me</a>
-                        </p>
-                        <p class="info social">
-                            <a href="javascript:shareOnFacebook();">
-                                <img src="assets/img/facebook.png">
-                            </a>
-                            <a href="">
-                                <img src="assets/img/twitter.png">
-                            </a>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <a name="signup">
-                <div class='signup-box'>
-                    <div class="row section">
-                        <div class="col-md header">
-                            <p>Start Investing $100 Monthly</p>
-                            <p class="subheader">
-                                For just $1 per month become a long term investor with the least possible effort.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="row section">
-                        <div class="col-md-4 col-md-offset-4" style="text-align:center">
-                            <form id="form-1" onsubmit="return register('form-1');">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="customer-name" placeholder="Your name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" name="customer-email" placeholder="Your email">
-                                </div>
-                                 <div class="form-group">
-                                    <input type="text" class="form-control" name="customer-country" placeholder="Your country of residence">
-                                </div>
-                                 <div class="form-group">
-                                    <textarea type="text" class="form-control" name="customer-wish" placeholder="How would investing $100 monthly benefit you?" rows="3"></textarea>
-                                </div>
-                                <p class="error"></p>
-                                <button type="submit" class="btn btn-success bumperTop-xs">Send Me An Invitation</button>
-                                <p class="disclaimer"></p>
-                                <p class="disclaimer">* We hate spam. We promise to use your email only to send you an invitation to become an investor.
-                                </p>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </a>
+            <div class='cta-box'></div>
 
             <hr class="bumperTop">
 
@@ -346,50 +271,97 @@
             </a>
 
             <hr class="bumperTop">
-            <div class="signup-box">
+
+            <div class="cta-box"></div>
+
+            <div class="row section footer">
+                <p>Copyright 2017 One Hundred Inc. Built in The Beautiful British Columbia. With love for people.</p>
+                <p class="icons">
+                    <a href="https://icons8.com/web-app/375/Positive-Dynamic">Icons by Icons8</a>
+                </p>
+            </div>
+        </div>
+
+        <script id="signup-tmpl" type="text">
+            <a name="signup">
+                <div class='signup-box'>
+                    <div class="row section">
+                        <div class="col-md header">
+                            <p>Start Investing $100 Monthly</p>
+                            <p class="subheader">
+                                For just $1 per month become a long term investor with the least possible effort.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row section">
+                        <div class="col-md-4 col-md-offset-4" style="text-align:center">
+                            <form id="form-1" onsubmit="return register('form-1');">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="customer-name" placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="customer-email" placeholder="Your email">
+                                </div>
+                                 <div class="form-group">
+                                    <input type="text" class="form-control" name="customer-country" placeholder="Your country of residence">
+                                </div>
+                                 <div class="form-group">
+                                    <textarea type="text" class="form-control" name="customer-wish" placeholder="How would investing $100 monthly benefit you?" rows="3"></textarea>
+                                </div>
+                                <p class="error"></p>
+                                <button type="submit" class="btn btn-success bumperTop-xs">Send Me An Invitation</button>
+                                <p class="disclaimer"></p>
+                                <p class="disclaimer">* We hate spam. We promise to use your email only to send you an invitation to become an investor.
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </script>
+
+        <script id="signup-success-tmpl" type="text">
+            <div class='signup-success-box'>
                 <div class="row section">
                     <div class="col-md header">
-                        <p>Start Investing $100 Monthly</p>
+                        <p>Good Work!</p>
                         <p class="subheader">
-                            For just $1/mo become a long term investor with the least possible effort.
+                            You've taken a huge leap towards a better future.
+                        </p>
+                    </div>
+                </div>
+                <div class="row section">
+                    <div class="col-md-6 col-md-offset-3 how-it-works" style="text-align:center">
+                        <p class="title">Thank You For Your Trust</p>
+                        <img src="assets/img/pray.png">
+                        <p class="info">
+                           Our team is working hard to bring you the simplest investing experience ever. We'll send you an invitation soon.
+                    </div>
+                </div>
+                <div class="row section">
+                    <div class="col-md-6 col-md-offset-3 how-it-works" style="text-align:center">
+                        <p class="title">Be A Teacher For Your Friends And Family</p>
+                        <img src="assets/img/share.png">
+                        <p class="info">
+                           Share your personalized link below to help your friends start investing for FREE for the first month. You’ll also receive a FREE month for each friend that becomes an investor with us.
+                        </p>
+                        <p class="referral-link">
+                            <a href="#" target="_blank">onehundred.me</a>
+                        </p>
+                        <p class="info social">
+                            <a href="javascript:shareOnFacebook();">
+                                <img src="assets/img/facebook.png">
+                            </a>
+                            <a href="">
+                                <img src="assets/img/twitter.png">
+                            </a>
                         </p>
                     </div>
                 </div>
 
-                <div class="row section">
-                    <div class="col-md-4 col-md-offset-4" style="text-align:center">
-                        <form id="form-2" onsubmit="return register('form-2');">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="customer-name" placeholder="Your Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="customer-email" placeholder="Your Email">
-                            </div>
-                             <div class="form-group">
-                                <input type="text" class="form-control" id="customer-country" placeholder="Your Country">
-                            </div>
-                             <div class="form-group">
-                                <textarea type="text" class="form-control" id="customer-wish" placeholder="Why would you like to start investing monthly $100?" rows="3"></textarea>
-                            </div>
-                            <p class="error"></p>
-                            <button type='submit' class="btn btn-success bumperTop-xs">Send Me An Invitation</button>
-                            <p class="disclaimer"></p>
-                            <p class="disclaimer">* we hate spam. We promise to use your email address just to notify you when you're invited to become an investor.</p>
-                        </form>
-                    </div>
-                </div>
             </div>
-
-            <div class="row section footer">
-                <p>Copyright 2017 One Hundred Inc. Built in The Beautiful British Columbia. With love for people.</p>
-
-                <p class="icons">
-                    <a href="https://icons8.com/web-app/375/Positive-Dynamic">Icons by Icons8</a>
-                </p>
-
-            </div>
-
-        </div>
+        </script>
 
         <script src="assets/js/lead-gen.js"></script>
         <script src="assets/js/money-chart.js"></script>
