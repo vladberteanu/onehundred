@@ -2,6 +2,7 @@ var express = require('express')
 var router = express.Router()
 var conn = require('../models')
 var shortid = require('shortid');
+var sendWelcomeEmail = require('../emails')
 
 
 router.get('/', function(req, res) {
@@ -46,6 +47,7 @@ router.post('/', function(req, res) {
             if (err) {
                 return res.sendStatus(500)
             }
+            sendWelcomeEmail(lead, function(err) { console.log(err)})
             res.send({ lead: lead.toClient() })
         })
     })
