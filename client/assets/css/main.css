@@ -26,12 +26,6 @@ a {
 .menu-bar {
     height: 80px;
     border-bottom: 1px solid #ddd;
-    font-color: @green;
-    .logo {
-        img {
-            padding-top: 15px;
-        }
-    }
 }
 
 .menu-bar.with-referral {
@@ -111,6 +105,7 @@ a {
     .title {
         font-size: 18px;
         font-weight: bold;
+        color: #000;
     }
 
     .subtitle {
@@ -221,4 +216,29 @@ a {
     a {
         color: @green;
     }
+}
+
+
+.navbar {
+    min-height: 79px;
+    padding-right: 15px;
+}
+.navbar-header { min-height: 78px !important;}
+
+.navbar-toggle {
+    margin-top: 20px;
+}
+
+.navbar-nav {
+    padding-top: 15px;
+}
+
+.navbar, .navbar-defaul {
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #777;
+    font-size: 15px;
 }

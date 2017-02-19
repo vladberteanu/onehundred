@@ -48,14 +48,32 @@
           <p>Thanks to your friend <strong></strong> you can start investing for free for the first month!</p>
         </div>
         <div class="menu-bar">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm logo">
-                        <img src="/assets/img/logo.png">
+            <nav class="navbar navbar-default navbar-static-top">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-brand logo">
+                            <img src="/assets/img/logo.png">
+                        </div>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#signup">Start Investing</a></li>
+                            <li><a href="#investing101">Investing 101</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
                     </div>
                 </div>
-            </div>
+            </nav>
         </div>
+
         <div class="container">
 
             <div class="row section">
@@ -169,40 +187,42 @@
 
             </div>
 
-            <div class='signup-box'>
-                <div class="row section">
-                    <div class="col-md header">
-                        <p>Start Investing $100 Monthly</p>
-                        <p class="subheader">
-                            For just $1 per month become a long term investor with the least possible effort.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="row section">
-                    <div class="col-md-4 col-md-offset-4" style="text-align:center">
-                        <form id="form-1" onsubmit="return register('form-1');">
-                            <div class="form-group">
-                                <input type="text" class="form-control" name="customer-name" placeholder="Your name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control" name="customer-email" placeholder="Your email">
-                            </div>
-                             <div class="form-group">
-                                <input type="text" class="form-control" name="customer-country" placeholder="Your country of residence">
-                            </div>
-                             <div class="form-group">
-                                <textarea type="text" class="form-control" name="customer-wish" placeholder="How would investing $100 monthly benefit you?" rows="3"></textarea>
-                            </div>
-                            <p class="error"></p>
-                            <button type="submit" class="btn btn-success bumperTop-xs">Send Me An Invitation</button>
-                            <p class="disclaimer"></p>
-                            <p class="disclaimer">* We hate spam. We promise to use your email only to send you an invitation to become an investor.
+            <a name="signup">
+                <div class='signup-box'>
+                    <div class="row section">
+                        <div class="col-md header">
+                            <p>Start Investing $100 Monthly</p>
+                            <p class="subheader">
+                                For just $1 per month become a long term investor with the least possible effort.
                             </p>
-                        </form>
+                        </div>
+                    </div>
+
+                    <div class="row section">
+                        <div class="col-md-4 col-md-offset-4" style="text-align:center">
+                            <form id="form-1" onsubmit="return register('form-1');">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="customer-name" placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="customer-email" placeholder="Your email">
+                                </div>
+                                 <div class="form-group">
+                                    <input type="text" class="form-control" name="customer-country" placeholder="Your country of residence">
+                                </div>
+                                 <div class="form-group">
+                                    <textarea type="text" class="form-control" name="customer-wish" placeholder="How would investing $100 monthly benefit you?" rows="3"></textarea>
+                                </div>
+                                <p class="error"></p>
+                                <button type="submit" class="btn btn-success bumperTop-xs">Send Me An Invitation</button>
+                                <p class="disclaimer"></p>
+                                <p class="disclaimer">* We hate spam. We promise to use your email only to send you an invitation to become an investor.
+                                </p>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </a>
 
             <hr class="bumperTop">
 
@@ -244,84 +264,86 @@
 
             <hr class="bumperTop">
 
-            <div class="row section">
-                <div class="col-md header">
-                    <p>Investing 101</p>
-                    <p class="subheader">
-                        All you'll ever have to know about investing.
-                    </p>
+            <a name="investing101">
+                <div class="row section">
+                    <div class="col-md header">
+                        <p>Investing 101</p>
+                        <p class="subheader">
+                            All you'll ever have to know about investing.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="row section">
-                <div class="col-sm-4 how-it-works">
-                    <p class="title">What Are Stocks?</p>
-                    <img src="assets/img/building.png">
-                    <p class="info">
-                        A stock is a fractional ownership of a company. When you buy a stock you start owning a very small piece of a company.
-                    </p>
-                    <p class="info">
-                        The more stocks you buy the more of that company you own.
-                    </p>
+                <div class="row section">
+                    <div class="col-sm-4 how-it-works">
+                        <p class="title">What Are Stocks?</p>
+                        <img src="assets/img/building.png">
+                        <p class="info">
+                            A stock is a fractional ownership of a company. When you buy a stock you start owning a very small piece of a company.
+                        </p>
+                        <p class="info">
+                            The more stocks you buy the more of that company you own.
+                        </p>
+                    </div>
+                    <div class="col-sm-4 how-it-works">
+                        <p class="title">What Is An Index Fund?</p>
+                        <img src="assets/img/index.png">
+                        <p class="info">
+                            An index fund aggregates a set of top performing companies.
+                            When you buy a stock in an index fund you start owning a very small piece from each company it aggregates.
+                        </p>
+                        <p class="info">
+                            This way you reduce your risk by spreading your investment through many companies at once. If one company goes bankrupt
+                            you lose a very small part of your investment, but it will be covered by the other companies you own that grow successfully.
+                        </p>
+                        <p class="info">
+                        For instance, if you buy a stock in Vanguard S&P 500 Index Fund, you will instantly own a small piece from each of the largest 500 companies in the US.
+                        </p>
+                    </div>
+                    <div class="col-sm-4 how-it-works">
+                        <p class="title">What Makes Your Investment Grow?</p>
+                        <img src="assets/img/growth.png">
+                        <p class="info">
+                            The companies you own are going to share their profit with you by paying you dividents. A few times a year profitable companies decide that part of their profits will get reinvested and part will be paid to the owners of the company, in this case you.
+                        </p>
+                        <p class="info">
+                            Companies grow over time and become more valuable. In this case the value of the stocks you own goes up. If you decide to sell, other people are willing to pay you more money for your stocks than what you paid for initially because now the company is worth more.
+                        </p>
+                    </div>
                 </div>
-                <div class="col-sm-4 how-it-works">
-                    <p class="title">What Is An Index Fund?</p>
-                    <img src="assets/img/index.png">
-                    <p class="info">
-                        An index fund aggregates a set of top performing companies.
-                        When you buy a stock in an index fund you start owning a very small piece from each company it aggregates.
-                    </p>
-                    <p class="info">
-                        This way you reduce your risk by spreading your investment through many companies at once. If one company goes bankrupt
-                        you lose a very small part of your investment, but it will be covered by the other companies you own that grow successfully.
-                    </p>
-                    <p class="info">
-                    For instance, if you buy a stock in Vanguard S&P 500 Index Fund, you will instantly own a small piece from each of the largest 500 companies in the US.
-                    </p>
-                </div>
-                <div class="col-sm-4 how-it-works">
-                    <p class="title">What Makes Your Investment Grow?</p>
-                    <img src="assets/img/growth.png">
-                    <p class="info">
-                        The companies you own are going to share their profit with you by paying you dividents. A few times a year profitable companies decide that part of their profits will get reinvested and part will be paid to the owners of the company, in this case you.
-                    </p>
-                    <p class="info">
-                        Companies grow over time and become more valuable. In this case the value of the stocks you own goes up. If you decide to sell, other people are willing to pay you more money for your stocks than what you paid for initially because now the company is worth more.
-                    </p>
-                </div>
-            </div>
 
-            <div class="row section">
-                <div class="col-sm-6 how-it-works">
-                    <p class="title">What Are The Risks?</p>
-                    <img src="assets/img/bearish.png">
-                    <p class="info">
-                        Since your investments are spread among many top performing companies you don't have to worry about any of them going bankrupt. One lost company will balance out with another one that performs really well.
-                    </p>
-                    <p class="info">
-                        There will be times when the economy goes through so-called recessions. During these times people are afraid to invest in companies and the demand for your stocks will be lower. Consequently, the value of your stocks will be lower. Nevertheless, history shows that the economy always recovers and the value of your stock will go up again.
-                    </p>
-                    <p class="info">
-                        One huge advantage you have during recessions is that you'll continue buying stock at very low price. When the economy recovers your profits will be at an all time high.
-                    </p>
-                    <p class="info">
-                     Do not sell during recessions. Keep investing!
-                    </p>
+                <div class="row section">
+                    <div class="col-sm-6 how-it-works">
+                        <p class="title">What Are The Risks?</p>
+                        <img src="assets/img/bearish.png">
+                        <p class="info">
+                            Since your investments are spread among many top performing companies you don't have to worry about any of them going bankrupt. One lost company will balance out with another one that performs really well.
+                        </p>
+                        <p class="info">
+                            There will be times when the economy goes through so-called recessions. During these times people are afraid to invest in companies and the demand for your stocks will be lower. Consequently, the value of your stocks will be lower. Nevertheless, history shows that the economy always recovers and the value of your stock will go up again.
+                        </p>
+                        <p class="info">
+                            One huge advantage you have during recessions is that you'll continue buying stock at very low price. When the economy recovers your profits will be at an all time high.
+                        </p>
+                        <p class="info">
+                         Do not sell during recessions. Keep investing!
+                        </p>
+                    </div>
+                    <div class="col-sm-6 how-it-works">
+                        <p class="title">What Is Inflation?</p>
+                        <img src="assets/img/banknotes.png">
+                        <p class="info">
+                            Inflation is a sustained increase in the price of goods and services. This means the money you save will buy you less and less things over time.
+                        </p>
+                        <p class="info">
+                            To keep up with the price increases you would need to earn more money at work.
+                        </p>
+                        <p class="info">
+                            An alternative would be to to invest your money. This way your money works for you to make more money and overcome the inflation.
+                        </p>
+                    </div>
                 </div>
-                <div class="col-sm-6 how-it-works">
-                    <p class="title">What Is Inflation?</p>
-                    <img src="assets/img/banknotes.png">
-                    <p class="info">
-                        Inflation is a sustained increase in the price of goods and services. This means the money you save will buy you less and less things over time.
-                    </p>
-                    <p class="info">
-                        To keep up with the price increases you would need to earn more money at work.
-                    </p>
-                    <p class="info">
-                        An alternative would be to to invest your money. This way your money works for you to make more money and overcome the inflation.
-                    </p>
-                </div>
-            </div>
+            </a>
 
             <hr class="bumperTop">
             <div class="signup-box">
