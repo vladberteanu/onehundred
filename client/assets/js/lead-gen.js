@@ -1,15 +1,13 @@
 var account = null;
+var referredBy = null;
 
 
-function getFormData(formId) {
-    var selectorInput = '#' + formId + ' input[name='
-    var selectorTextArea = '#' + formId + ' textarea'
-
+function getFormData(form) {
     return {
-        name: $(selectorInput + '"customer-name"]').val(),
-        email: $(selectorInput + '"customer-email"]').val(),
-        country: $(selectorInput + '"customer-country"]').val(),
-        reason: $(selectorTextArea).val()
+        name: form.find('input[name="customer-name"]').val(),
+        email: form.find('input[name="customer-email"]').val(),
+        country: form.find('input[name="customer-country"]').val(),
+        reason: form.find('textarea').val()
     }
 }
 
@@ -27,13 +25,13 @@ function validationMessage(data) {
     }
 }
 
-function getErrorBox(formId) {
-    return $('#' + formId + ' .error');
+function getErrorBox(form) {
+    return form.find('.error')
 }
 
 
-function displayRegistrationError(formId, errorMessage) {
-    var errorBox = getErrorBox(formId)
+function displayRegistrationError(form, errorMessage) {
+    var errorBox = getErrorBox(form)
     errorBox.html(errorMessage)
     errorBox.show()
 }
@@ -53,16 +51,20 @@ function displayRegistrationSuccess() {
 }
 
 
-function register(formId) {
-    var errorBox = getErrorBox(formId)
-    var formData = getFormData(formId)
+function register(form) {
+    var errorBox = getErrorBox(form)
+    var formData = getFormData(form)
     var errorMessage = validationMessage(formData)
 
     errorBox.hide()
 
     if (errorMessage) {
-        displayRegistrationError(formId, errorMessage)
+        displayRegistrationError(form, errorMessage)
         return false;
+    }
+
+    if (referredBy) {
+        formData.referredBy = referredBy
     }
 
     $.ajax({
@@ -73,7 +75,7 @@ function register(formId) {
         data: JSON.stringify({lead: formData}),
         success: function (response) {
             if (response.error) {
-                displayRegistrationError(formId, response.error)
+                displayRegistrationError(form, response.error)
             } else {
                 account = response.lead
                 displayRegistrationSuccess()
@@ -129,6 +131,7 @@ function loadReferralBar() {
         success: function (response) {
             if (response.lead) {
                 displayReferralBar(response.lead.name)
+                referredBy = response.lead.referralLink
             }
         },
    });

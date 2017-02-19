@@ -9,6 +9,7 @@ var leadSchema = new Schema(
         reason: String,
         country: String,
         referralLink: String,
+        referredBy: String,
         created: Date,
     }
 )
