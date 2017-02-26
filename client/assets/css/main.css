@@ -153,6 +153,11 @@ a {
             color: @green;
         }
     }
+
+    a {
+        text-decoration: none !important;
+        color: @green !important;
+    }
 }
 
 .form-control {
@@ -234,4 +239,8 @@ a {
 .navbar-default .navbar-nav>li>a {
     color: #777;
     font-size: 15px;
+}
+
+.align-center {
+    text-align: center !important;
 }
