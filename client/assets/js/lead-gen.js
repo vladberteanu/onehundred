@@ -144,7 +144,7 @@ function shareOnFacebook() {
 
     FB.ui({
       method: 'feed',
-      description: 'OneHundred',
+      name: 'OneHundred',
       link: 'http://onehundred.me?ref=' + referralLink,
       caption: 'Start investing $100 monthly',
       picture: 'http://onehundred.me/assets/img/short-logo-large.png',
