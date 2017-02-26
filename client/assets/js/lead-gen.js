@@ -151,3 +151,15 @@ function shareOnFacebook() {
       description: 'The simplest investing experience ever.'
     }, function(response){});
 }
+
+
+function shareOnTwitter() {
+    var referralLink = account ? account.referralLink : null
+    var url = 'http://onehundred.me?ref=' + referralLink
+
+    var text = 'Start investing $100 monthly. Free for the first month! ' + url
+
+    window.open('http://twitter.com/share?url='+encodeURIComponent(url)+'&text='+encodeURIComponent(text), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+
+    return false;
+}
