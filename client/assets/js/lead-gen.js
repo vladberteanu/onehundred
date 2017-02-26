@@ -51,15 +51,19 @@ function displayRegistrationSuccess() {
 }
 
 
+
 function register(form) {
     var errorBox = getErrorBox(form)
     var formData = getFormData(form)
     var errorMessage = validationMessage(formData)
 
+    form.find('button').prop('disabled', true)
+
     errorBox.hide()
 
     if (errorMessage) {
         displayRegistrationError(form, errorMessage)
+        form.find('button').prop('disabled', false)
         return false;
     }
 
@@ -80,6 +84,7 @@ function register(form) {
                 account = response.lead
                 displayRegistrationSuccess()
             }
+            form.find('button').prop('disabled', false)
         },
    });
     return false;
