@@ -146,5 +146,7 @@ function shareOnFacebook() {
       method: 'feed',
       link: 'http://onehundred.me?ref=' + referralLink,
       caption: 'Start investing $100 monthly',
+      picture: 'http://onehundred.me/assets/img/short-logo-large.png',
+      description: 'The simplest investing experience ever.'
     }, function(response){});
 }
